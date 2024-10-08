@@ -10,7 +10,7 @@ export const fetchOrder = createAsyncThunk(
     try {
       const url = 'http://localhost:3000/api/orders/';
       const response = await axios.get(url, { params: searchParams });
-      return response.data.docs;
+      return response.data;
     } catch (error) {
       return rejectWithValue(error.response.data);
     }
@@ -24,7 +24,7 @@ export const fetchOrdersWithFilters = createAsyncThunk(
     try {
       const url = 'http://localhost:3000/api/orders/';
       const response = await axios.get(url, { params: searchParams });
-      return response.data.docs;
+      return response.data;
     } catch (error) {
       return rejectWithValue(error.response.data);
     }
@@ -36,7 +36,7 @@ export const fetchOrderById = createAsyncThunk(
   async (orderId, { rejectWithValue }) => {
     try {
       const response = await axios.get(`http://localhost:3000/api/orders/${orderId}`);
-      return response.data.docs;
+      return response.data;
     } catch (error) {
       return rejectWithValue(error.response.data);
     }
@@ -115,3 +115,6 @@ const vendorOrderSlice = createSlice({
 });
 
 export default vendorOrderSlice.reducer;
+
+
+

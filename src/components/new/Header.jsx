@@ -49,11 +49,11 @@ const Header = () => {
     <ToastContainer />
   <div>
       {/* Header Component */}
-      <div className="header flex items-center justify-between py-2 px-6 shadow fixed top-0 left-0 right-0 bg-white z-50">
+      <div className="header flex items-center justify-between py-2 px-6 shadow fixed top-0 left-0 right-0 bg-[#1EBEB6] text-white z-50">
         {/* Left Section: Logo */}
         <div className="left px-7">
           <img
-            src="E-bazar.png"
+            src="logo.png"
             alt="Logo"
             width="40"
             style={{ height: "4rem" }}
@@ -141,7 +141,7 @@ const Header = () => {
           </div>
 
           {/* Message Icon */}
-          <div
+          {/* <div
             className="relative flex items-center mr-6 cursor-pointer"
             onMouseEnter={showMessageTooltip}
             onMouseLeave={hideMessageTooltip}
@@ -152,15 +152,14 @@ const Header = () => {
                 Message Tooltip
               </span>
             )}
-          </div>
+          </div> */}
 
           {/* Shopping Cart Icon */}
-          <div className="relative flex items-center mr-6 cursor-pointer">
+          {/* <div className="relative flex items-center mr-6 cursor-pointer">
             <FaShoppingCart size={20} />
-            {/* <span className="absolute top-0 right-0 inline-flex items-center justify-center px-1.5 py-0.5 text-xs font-bold text-white bg-red-500 rounded-full">
-                  5
-                </span> */}
+       
           </div>
+           */}
 
           {/* User Icon */}
           <div className="flex items-center cursor-pointer">

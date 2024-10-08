@@ -36,7 +36,7 @@ export const createCategory = createAsyncThunk(
   async (categoryData, { rejectWithValue }) => {
     try {
       const response = await axios.post(API_URL, categoryData);
-      return response.data;
+      return response.data.docs;
     } catch (error) {
       return rejectWithValue(error.response?.data || error.message);
     }

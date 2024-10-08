@@ -26,7 +26,7 @@ const VendorPendingProductPage = () => {
         category: '',
         searchValue: '',
         userType: 'vendor', // Filter for vendor
-        status: 'pending', // Filter for pending status
+        status: '', // Filter for pending status
         vendorNew4Days: false
       }}
     />

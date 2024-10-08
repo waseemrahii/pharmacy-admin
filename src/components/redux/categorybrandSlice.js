@@ -17,7 +17,7 @@ export const fetchBrands = createAsyncThunk(
   'category/fetchBrands',
   async () => {
     const response = await axios.get('http://localhost:3000/api/brands/');
-    return response.data.docs || []; // Handle cases where response.data.docs might not be an array
+    return response.data.doc || []; // Handle cases where response.data.docs might not be an array
   }
 );
 
@@ -39,7 +39,7 @@ export const fetchSubCategories = createAsyncThunk(
   'category/fetchSubCategories',
   async (mainCategorySlug) => {
     const response = await axios.get(`http://localhost:3000/api/sub-categories/main-category/${mainCategorySlug}`);
-    return response.data.docs || [];  // Handle cases where response.data.docs.subCategories might not be an array
+    return response.data.doc || [];  // Handle cases where response.data.docs.subCategories might not be an array
   }
 );
 
@@ -48,7 +48,7 @@ export const fetchSubSubCategories = createAsyncThunk(
   'category/fetchSubSubCategories',
   async (subCategorySlug) => {
     const response = await axios.get(`http://localhost:3000/api/sub-sub-categories/subcategory/${subCategorySlug}`);
-    return response.data.docs || [];  // Handle cases where response.data.docs.subSubCategories might not be an array
+    return response.data.doc || [];  // Handle cases where response.data.docs.subSubCategories might not be an array
   }
 );
 

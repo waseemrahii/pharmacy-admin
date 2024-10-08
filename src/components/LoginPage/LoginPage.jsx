@@ -200,13 +200,13 @@ const LoginPage = () => {
               </button>
             </div>
           </div>
-          <div className="form-group mb-4">
+          <div className="form-group"> 
             <div className="custom-control custom-checkbox flex items-center gap-1">
               <input type="checkbox" className="custom-control-input" id="rememberMe" name="remember" />
               <label className="custom-control-label text-gray-500" htmlFor="rememberMe">Remember me</label>
             </div>
           </div>
-          <div id="recaptcha_element" className="w-full mb-0" style={{ height: '100px' }}></div>
+          {/* <div id="recaptcha_element" className="w-full mb-0" style={{ height: '100px' }}></div> */}
           <button type="submit" className="btn btn-block p-3 rounded bg-green-300 hover:bg-green-200 hover:text-black text-white font-semibold mt-0">
             Sign in
           </button>
