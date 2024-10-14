@@ -10,7 +10,7 @@ const CategoryList = React.memo(({ categories, handleDelete, handleSearch, searc
         <td>{`C${category._id.substring(0, 6)}`}</td>
         <td>
           <img
-            src={`http://localhost:3000/uploads/${category.logo}`} 
+            src={`https://pharmacy-server-1.onrender.com/uploads/${category.logo}`} 
             className="avatar" 
             alt={category.name} 
             aria-label="Category Logo"
