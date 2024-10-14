@@ -7,7 +7,7 @@ import axios from 'axios';
 export const fetchCategories = createAsyncThunk(
   'category/fetchCategories',
   async () => {
-    const response = await axios.get('http://localhost:3000/api/categories/');
+    const response = await axios.get('https://pharmacy-server-1.onrender.com/api/categories/');
     return response.data.docs || []; // Assuming response.data.docs contains the array of categories
   }
 );
@@ -16,7 +16,7 @@ export const fetchCategories = createAsyncThunk(
 export const fetchBrands = createAsyncThunk(
   'category/fetchBrands',
   async () => {
-    const response = await axios.get('http://localhost:3000/api/brands/');
+    const response = await axios.get('https://pharmacy-server-1.onrender.com/api/brands/');
     return response.data.doc || []; // Handle cases where response.data.docs might not be an array
   }
 );
@@ -25,13 +25,13 @@ export const fetchBrands = createAsyncThunk(
 export const fetchColors = createAsyncThunk(
   'category/fetchColors',
   async () => {
-    const response = await axios.get('http://localhost:3000/api/colors/');
+    const response = await axios.get('https://pharmacy-server-1.onrender.com/api/colors/');
     return response.data || []; // Assuming response.data.docs contains the array of colors
   }
 );
 
 export const fetchAttributes = createAsyncThunk('attributes/fetchAttributes', async () => {
-  const response = await axios.get('http://localhost:3000/api/attributes/');
+  const response = await axios.get('https://pharmacy-server-1.onrender.com/api/attributes/');
   return response.data;
 });
 // Fetch sub-categories by main category slug
