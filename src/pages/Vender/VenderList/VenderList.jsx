@@ -58,7 +58,7 @@ const VendorTable = ({ vendors, onDeleteVendor, onUpdateStatus }) => (
                 <img
                   width="50"
                   className="avatar rounded-circle"
-                  src={`http://localhost:3000/${vendor.vendorImage}`}
+                  src={`https://pharmacy-server-1.onrender.com/${vendor.vendorImage}`}
                   alt=""
                 />
               </div>
