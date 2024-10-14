@@ -149,7 +149,7 @@ const VendorList = () => {
   useEffect(() => {
     const fetchVendors = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/vendors");
+        const response = await axios.get("https://pharmacy-server-1.onrender.com/api/vendors");
         const vendorsData = response.data.docs;
 
         // Fetch products count for each vendor
@@ -157,7 +157,7 @@ const VendorList = () => {
           vendorsData.map(async (vendor) => {
             try {
               const productsResponse = await axios.get(
-                `http://localhost:3000/api/products/?userId=${vendor._id}`
+                `https://pharmacy-server-1.onrender.com/api/products/?userId=${vendor._id}`
               );
               const totalProducts = productsResponse.data.docs.length;
               return { ...vendor, totalProducts };
@@ -173,7 +173,7 @@ const VendorList = () => {
           vendorsWithProducts.map(async (vendor) => {
             try {
               const ordersResponse = await axios.get(
-                `http://localhost:3000/api/orders/?vendorId=${vendor._id}`
+                `https://pharmacy-server-1.onrender.com/api/orders/?vendorId=${vendor._id}`
               );
               const totalOrders = ordersResponse.data.docs.length;
               return { ...vendor, totalOrders };
@@ -207,7 +207,7 @@ const VendorList = () => {
 
       if (result.isConfirmed) {
         const response = await axios.delete(
-          `http://localhost:3000/api/vendors/${vendorId}`
+          `https://pharmacy-server-1.onrender.com/api/vendors/${vendorId}`
         );
         if (response.status === 200) {
           Swal.fire("Deleted!", "Vendor has been deleted.", "success");
@@ -237,7 +237,7 @@ const VendorList = () => {
 
       if (result.isConfirmed) {
         const response = await axios.put(
-          `http://localhost:3000/api/vendors/${vendorId}/status`,
+          `https://pharmacy-server-1.onrender.com/api/vendors/${vendorId}/status`,
           { status }
         );
         if (response.status === 200) {
