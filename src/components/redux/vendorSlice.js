@@ -2,7 +2,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const API_URL = `http://localhost:3000/api/vendors/`;
+const API_URL = `https://pharmacy-server-1.onrender.com/api/vendors/`;
 
 
 export const createVendor = createAsyncThunk(
