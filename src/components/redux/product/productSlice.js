@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 // API Endpoints
-const API_URL = 'http://localhost:3000/api/products';
+const API_URL = 'https://pharmacy-server-1.onrender.com/api/products';
 
 // Fetch products with dynamic query parameters
 export const fetchProducts = createAsyncThunk(
